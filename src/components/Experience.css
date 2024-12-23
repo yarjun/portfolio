@@ -1,0 +1,112 @@
+/* General styles and section title */
+.experience-container {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.experience-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.experience-item.left {
+    justify-content: flex-start;
+}
+
+.experience-item.right {
+    justify-content: flex-end;
+}
+
+.experience-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+}
+
+/* Dot position for left aligned content (left side of the line) */
+.experience-item.left .experience-dot {
+    left: calc(50% - 20px); /* Align the dot to the left side of the line */
+}
+
+/* Dot position for right aligned content (right side of the line) */
+.experience-item.right .experience-dot {
+    left: calc(50% + 10px); /* Align the dot to the right side of the line */
+}
+
+.experience-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: fit-content;
+    text-align: left;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.experience-company,
+.experience-date-range,
+.experience-description {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-item.left,
+    .experience-item.right {
+        justify-content: center;
+    }
+
+    .experience-dot {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .experience-content {
+        max-width: 90%;
+    }
+}

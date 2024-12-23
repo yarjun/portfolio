@@ -1,0 +1,102 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 2rem;
+    justify-content: space-between; /* Name on the left, links on the right */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center content */
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* For the left side: name and hamburger */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25px; /* Reduced width */
+    height: 20px; /* Reduced height */
+    margin-right: 1rem; /* Added margin to the right */
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 4px; /* Reduced bar height */
+    background-color: #333;
+    border-radius: 2px; /* Optional: adds rounded corners to the bars */
+    transition: all 0.3s ease;
+}
+
+/* Style for the name */
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2196f3; /* Primary blue color */
+    cursor: pointer;
+}
+
+/* Style for the navigation links */
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Space between links */
+}
+
+/* Style for individual links */
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #2196f3; /* Change color on hover */
+}
+
+/* For mobile views (below 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on smaller screens */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        width: 250px; /* Reduced width */
+        height: 100vh; /* Full height */
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 999;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
+        padding-top: 1rem; /* Add padding from the top */
+        transition: transform 0.3s ease; /* Smooth transition for opening/closing */
+        transform: translateX(-100%); /* Initially off-screen */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show links when menu is open */
+        transform: translateX(0); /* Move into view */
+    }
+
+    .hamburger {
+        margin-left: 1rem; /* Add margin to the left of the hamburger */
+    }
+}
