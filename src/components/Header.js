@@ -41,10 +41,10 @@ function Header() {
         <a href="/About">About</a>
         <a href="/Technologies">Technologies</a>
         <a href="/Experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
+        <a href="/Projects">Projects</a>
+        <a href="/Certificates">Certificates</a>
+        <a href="/Interests">Interests</a>
+        <a href="/Contact">Contact</a>
       </div>
     </nav>
   );

@@ -1,0 +1,111 @@
+.contact-container {
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f7f7f7;
+    flex-direction: column;
+    display: flex; /* Enable flexbox */
+    
+  }
+  
+  .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    animation: fadeIn 1s ease-out;
+    text-align: center;
+  }
+  
+  .lottie-animation {
+    margin-bottom: 10px;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px; /* Increased spacing between rows */
+  }
+  
+  .input-group {
+    position: relative;
+    flex: 1; /* Ensures equal width for all inputs in the row */
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px; /* Adds space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .input-group .icon {
+    position: absolute;
+    left: 15px; /* Position the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff; /* Blue color for the icon */
+    font-size: 1.2rem;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .send-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .send-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+  
+  .status-message {
+    text-align: center;
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,89 @@
+.interests-container {
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 50px;
+    background-color: #f4f4f4;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Distribute space between items */
+    max-width: 1200px; /* Optional max-width for larger screens */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .interests-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .interests-box {
+    display: flex;
+    justify-content: space-between; /* Ensure space between items */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    gap: 30px;
+  }
+  
+  .interest-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 120px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    opacity: 0.8;
+    word-wrap: break-word; /* Ensure the text will wrap inside the box */
+    text-align: center; /* Center the text horizontally */
+    flex-grow: 1; /* Allow items to grow and take available space */
+  }
+  
+  .interest-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+  
+  .interest-icon {
+    font-size: 3rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .interest-item:hover .interest-icon {
+    color: #28a745;
+  }
+  
+  .interest-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    word-wrap: break-word; /* Ensure text wraps correctly */
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .interests-box {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .interest-item {
+      width: 90%; /* Make items take more space on mobile */
+      height: 130px;
+    }
+  
+    .interest-name {
+      font-size: 0.9rem; /* Slightly reduce font size on mobile */
+    }
+  }
+  

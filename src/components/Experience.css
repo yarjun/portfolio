@@ -1,25 +1,32 @@
-/* General styles and section title */
 .experience-container {
     padding: 50px 0;
     text-align: center;
-}
-
-.section-title {
+  }
+  
+  .section-title {
     font-size: 2rem;
     margin-bottom: 30px;
-}
-
-.experience-timeline {
+  }
+  .details-container-title{
+    font: 500 16px/20px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .experience-company{
+    font: 400 13px/20px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .experience-date-range{
+    font: 400 13px/20px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .experience-timeline {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.experience-timeline::before {
+  }
+  
+  .experience-timeline::before {
     content: "";
     position: absolute;
     top: 0;
@@ -27,47 +34,45 @@
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    background-color: #ddd;
+    background-color: #9ca5ad;
     z-index: -1;
-}
-
-.experience-item {
+  }
+  
+  .experience-item {
     display: flex;
+    align-items: center;
     margin-bottom: 2rem;
     position: relative;
     width: 100%;
-    justify-content: center;
-}
-
-.experience-item.left {
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .experience-item.left {
     justify-content: flex-start;
-}
-
-.experience-item.right {
+  }
+  
+  .experience-item.right {
     justify-content: flex-end;
-}
-
-.experience-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #2196f3;
+  }
+  
+  .experience-arrow {
+    font-size: 2rem;
+    color: #9ca5ad;
+    margin: 0;
     position: absolute;
-    top: 10px;
-    z-index: 1;
-}
-
-/* Dot position for left aligned content (left side of the line) */
-.experience-item.left .experience-dot {
-    left: calc(50% - 20px); /* Align the dot to the left side of the line */
-}
-
-/* Dot position for right aligned content (right side of the line) */
-.experience-item.right .experience-dot {
-    left: calc(50% + 10px); /* Align the dot to the right side of the line */
-}
-
-.experience-content {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .experience-item.left .experience-arrow {
+    right: calc(53% - 25px); /* Positions arrow at the center of the space between the box and the line */
+  }
+  
+  .experience-item.right .experience-arrow {
+    left: calc(53% - 25px); /* Positions arrow at the center of the space between the box and the line */
+  }
+  
+  .experience-content {
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 8px;
@@ -75,38 +80,85 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .icon-container {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .details-container {
+    width: 80%;
+    padding-left: 10px;
     text-align: left;
-}
-
-.experience-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.experience-company,
-.experience-date-range,
-.experience-description {
-    margin: 5px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .experience-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .experience-item.left,
-    .experience-item.right {
-        justify-content: center;
-    }
-
-    .experience-dot {
-        position: static;
-        margin-bottom: 15px;
-    }
-
-    .experience-content {
-        max-width: 90%;
-    }
-}
+  }
+  
+  .read-more-btn {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #1769aa;
+  }
+  
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 100; /* Ensure modal is on top */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  /* Remove the dimming effect */
+  .experience-item-dimmed {
+    pointer-events: none; 
+  }

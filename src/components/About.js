@@ -134,7 +134,7 @@ function About() {
                 fluid 
                 style={{ 
                   width: '380px', // Adjust the size as needed
-                  height: '550px', 
+                  height: '520px', 
                   objectFit: 'cover' 
                 }} 
               />
