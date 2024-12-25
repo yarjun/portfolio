@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { FaUser, FaEnvelope, FaPaperPlane, FaRegComment } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import Lottie from 'react-lottie';
-import animationData from '../assets/images/Animation.json'; // Path to your Lottie animation file
+import animationData from '../assets/images/Animation.json'; 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; 
+import L from 'leaflet'; 
 import './Contact.css';
 
 const Contact = () => {
@@ -27,10 +29,10 @@ const Contact = () => {
     setStatusMessage('');
 
     emailjs.send(
-      'your_service_id', // Your EmailJS Service ID
-      'your_template_id', // Your EmailJS Template ID
+      'your_service_id', 
+      'your_template_id',
       formData,
-      'your_user_id' // Your EmailJS User ID
+      'your_user_id' 
     )
     .then((response) => {
       setIsSending(false);
@@ -43,7 +45,7 @@ const Contact = () => {
     });
   };
 
-  // Lottie animation options
+  
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -54,12 +56,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div id="contact-section" className="contact-container">
       <div className="contact-form">
+        <h2 className="contact-title">Contact Me</h2>
         <div className="lottie-animation">
           <Lottie options={lottieOptions} height={100} width={100} />
         </div>
-        <h2 className="contact-title">Contact Me</h2>
+
         <form onSubmit={handleSubmit}>
           <div className="input-row">
             <div className="input-group">
@@ -119,7 +122,21 @@ const Contact = () => {
           </button>
         </form>
 
-        {statusMessage && <p className="status-message">{statusMessage}</p>}
+        {statusMessage && <p className={`status-message ${isSending ? 'loading' : ''}`}>{statusMessage}</p>}
+      </div>
+
+      <div className="leaflet-map">
+        <h3>Find Me Here</h3>
+        <MapContainer center={[45.4215, -75.6972]} zoom={13} style={{ height: '100%', width: '100%' }}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[45.5017, -73.5673]}>
+            <Popup>
+              <span>My Location</span>
+            </Popup>
+          </Marker>
+        </MapContainer>
       </div>
     </div>
   );

@@ -1,164 +1,239 @@
 .experience-container {
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  .details-container-title{
-    font: 500 16px/20px Roboto, "Helvetica Neue", sans-serif;
-  }
-  .experience-company{
-    font: 400 13px/20px Roboto, "Helvetica Neue", sans-serif;
-  }
-  .experience-date-range{
-    font: 400 13px/20px Roboto, "Helvetica Neue", sans-serif;
-  }
-  .experience-timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section-title {
+  font: 600 35px/20px Roboto, "Helvetica Neue", sans-serif;
+  margin-bottom: 70px;
+}
+
+.details-container-title {
+  font: 550 17px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.experience-company {
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.experience-date-range {
+  font: italic 400 13px/20px Roboto, "Helvetica Neue", sans-serif;
+  margin-top: -14px !important;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background-color: #9ca5ad;
+  z-index: -1;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.experience-item.left {
+  justify-content: flex-start;
+}
+
+.experience-item.right {
+  justify-content: flex-end;
+}
+
+.experience-arrow {
+  font-size: 2rem;
+  color: #9ca5ad;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.experience-item.left .experience-arrow {
+  right: calc(53% - 25px);
+}
+
+.experience-item.right .experience-arrow {
+  left: calc(53% - 25px);
+}
+
+.experience-content {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-container {
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container img {
+  width: 80px;
+  height: 90px;
+}
+
+.details-container {
+  width: 76%;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.read-more-btn {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: #1769aa;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  z-index: 100;
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content a {
+  color: #2196f3;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.experience-item-dimmed {
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
   .experience-timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: #9ca5ad;
-    z-index: -1;
+    display: none;
+    pointer-events: none;
   }
-  
-  .experience-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    position: relative;
-    width: 100%;
-    transition: opacity 0.3s ease-in-out; 
+  .section-title {
+    font: 600 32px/20px Roboto, "Helvetica Neue", sans-serif;
+    margin-bottom: 40px;
   }
-  
-  .experience-item.left {
-    justify-content: flex-start;
-  }
-  
-  .experience-item.right {
-    justify-content: flex-end;
-  }
-  
-  .experience-arrow {
-    font-size: 2rem;
-    color: #9ca5ad;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .experience-item.left .experience-arrow {
-    right: calc(53% - 25px); /* Positions arrow at the center of the space between the box and the line */
-  }
-  
-  .experience-item.right .experience-arrow {
-    left: calc(53% - 25px); /* Positions arrow at the center of the space between the box and the line */
-  }
-  
-  .experience-content {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .icon-container {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .icon-container img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
   .details-container {
-    width: 80%;
-    padding-left: 10px;
-    text-align: left;
+    width: 76%;
+    padding-left: 20px !important;
+    text-align: left !important;
   }
-  
-  .read-more-btn {
-    background-color: #2196f3;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .read-more-btn:hover {
-    background-color: #1769aa;
-  }
-  
-  /* Modal styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
+  .experience-item {
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
   }
-  
+
+  .experience-arrow {
+    display: none;
+    pointer-events: none;
+  }
+
+  .experience-content {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .icon-container {
+    margin-bottom: 10px;
+  }
   .modal-content {
+    font: 400 11px/15px Roboto, "Helvetica Neue", sans-serif;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     position: relative;
-    z-index: 100; /* Ensure modal is on top */
+    z-index: 100;
+    text-align: left;
   }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  .details-container {
+    text-align: center;
+    padding-left: 0;
   }
-  
-  .modal-logo {
-    display: block;
-    margin: 0 auto 20px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-  
-  /* Remove the dimming effect */
+
   .experience-item-dimmed {
-    pointer-events: none; 
+    pointer-events: none;
+    z-index: -1;
   }
+
+  .modal-overlay {
+    z-index: 2000;
+  }
+}

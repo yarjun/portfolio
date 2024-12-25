@@ -1,57 +1,83 @@
 .certificates-container {
-    margin-top: 50px !important;
-    height: 450px; /* Adjust height as needed */
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Distribute space between items */
-    max-width: 1200px; /* Optional max-width for larger screens */
-    margin: 0 auto; /* Center the container */
-    background-color: #f9f9f9;
+  margin-top: 50px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  height: auto;
+  padding-top: 30px;
+}
+
+.certificates-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font: 600 32px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.certificates-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1150px;
+  gap: 20px;
+}
+
+.certificate {
+  position: relative;
+  width: 48%;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.certificate img {
+  width: 100%;
+  height: 94%;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.certificate:hover {
+  width: 60%;
+  height: 60%;
+}
+
+.left:hover {
+  z-index: 2;
+}
+
+.right:hover {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .certificates-container {
+    height: auto;
+    align-items: center;
   }
-  
+
+  .certificates-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificates-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font: 600 32px/20px Roboto, "Helvetica Neue", sans-serif;
+  }
+
   .certificate {
-    position: relative;
-    width: 50%; /* Slightly reduce width for spacing between certificates */
-    height: 90%;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    width: 80%;
+    margin-bottom: 20px;
   }
-  
-  .certificate img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Use contain to ensure the image scales correctly */
-    transition: all 0.3s ease-in-out;
+
+  .certificate:last-child {
+    margin-bottom: 0;
   }
-  
-  .certificate:hover {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .left:hover {
-    z-index: 2;
-  }
-  
-  .right:hover {
-    z-index: 1;
-  }
-  
-  /* Mobile view (max-width: 768px) */
-  @media (max-width: 768px) {
-    .certificates-container {
-      flex-direction: column; /* Stack certificates vertically */
-      height: auto; /* Allow height to adjust dynamically */
-      align-items: center; /* Center certificates horizontally */
-    }
-  
-    .certificate {
-      width: 80%; /* Set the certificates to take 80% of the width */
-      margin-bottom: 20px; /* Add space between certificates */
-    }
-  
-    .certificate:last-child {
-      margin-bottom: 0; /* Remove margin from the last certificate */
-    }
-  }
-  
+}

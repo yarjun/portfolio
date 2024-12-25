@@ -1,25 +1,27 @@
 .interests-container {
+    margin-top: 50px !important;
     flex-direction: column;
-    /* justify-content: center; */
-    padding: 50px;
-    background-color: #f4f4f4;
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Distribute space between items */
-    max-width: 1200px; /* Optional max-width for larger screens */
-    margin: 0 auto; /* Center the container */
+ 
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
   }
   
   .interests-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
   }
+
   
   .interests-box {
     display: flex;
-    justify-content: space-between; /* Ensure space between items */
+    justify-content: space-between; 
     flex-wrap: wrap;
     width: 100%;
     max-width: 1000px;
@@ -40,9 +42,9 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     opacity: 0.8;
-    word-wrap: break-word; /* Ensure the text will wrap inside the box */
-    text-align: center; /* Center the text horizontally */
-    flex-grow: 1; /* Allow items to grow and take available space */
+    word-wrap: break-word; 
+    text-align: center; 
+    flex-grow: 1; 
   }
   
   .interest-item:hover {
@@ -66,7 +68,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: #333;
-    word-wrap: break-word; /* Ensure text wraps correctly */
+    word-wrap: break-word; 
     max-width: 100%;
   }
   
@@ -76,14 +78,22 @@
       align-items: center;
       gap: 20px;
     }
+   
+    .interests-title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 40px;
+    }
   
     .interest-item {
-      width: 90%; /* Make items take more space on mobile */
+      width: 90%;
       height: 130px;
     }
   
     .interest-name {
-      font-size: 0.9rem; /* Slightly reduce font size on mobile */
+      font-size: 0.9rem; 
     }
   }
   

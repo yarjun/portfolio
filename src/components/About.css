@@ -1,128 +1,133 @@
 .about-section {
     padding: 40px;
     margin-top: 0px;
-    }
-    
-.intro-message span {
+  }
+  
+  .intro-message span {
     font-weight: bold;
     color: #007bff;
-    display: inline-block; /* Important for consistent animation */
-    }
-    
-.line3 {
+    display: inline-block;
+  }
+  
+  .line3 {
     width: 15px;
     display: inline-block;
     vertical-align: middle;
-    border: none; /* Remoe default border */
-    border-top: 3px solid #5b5d6b; 
+    border: none;
+    border-top: 3px solid #5b5d6b;
     opacity: 1;
-    }
-    
-.description{
+  }
+  
+  .description {
     color: #5b5d6b;
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.07rem;
     line-height: 25px !important;
     font-weight: 500 !important;
     margin-bottom: 15px;
     font: 400 18px/24px Roboto, "Helvetica Neue", sans-serif;
     margin-top: 23px;
-    }
-    
-.hello {
+  }
+  
+  .hello {
     padding-left: 5px;
     font: 400 18px / 20px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
-    }
-    
-.hello-class{
+  }
+  
+  .hello-class {
     margin-bottom: 5px;
-    }
-    
-.intro {
+  }
+  
+  .intro {
     font-size: xx-large !important;
     color: #404252 !important;
     margin-bottom: 15px;
-    font: 400 24px / 32px Roboto, "Helvetica Neue", sans-serif;
+    font: 400 24px / 25px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     margin: 0 0 15px;
-    }
-    
-.surname{
+  }
+  
+  .surname {
     color: #022c67;
     font-weight: 500;
     margin-left: 11px;
-    }
-    
-h2{
+  }
+  
+  h2 {
     font: 500 20px / 32px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
     color: #404252;
-    }
-    
-.intro-message{
+  }
+  
+  .intro-message {
     font-size: 45px;
     line-height: 50px;
-    }
-.intro-message2{
-        margin-top: 50px;
-    }
-    
-.about-container {
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Distribute space between items */
-    max-width: 1200px; /* Optional max-width for larger screens */
-    margin: 0 auto; /* Center the container */
-    }
-    
-    
-.about-content {
-    flex: 1; /* Takes up available space */
-    padding-right: 20px; /* Add some spacing between text and image */
-    text-align: left; /* Align text to the left */
-    }
-    
-    
-.about-content p {
+  }
+  
+  .intro-message2 {
+    margin-top: 50px;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+  }
+  
+  .about-content p {
     margin-bottom: 10px;
     line-height: 1.6;
-    }
-    
-    
-.about-actions {
+  }
+  
+  .about-actions {
     margin-top: 35px;
-    }
-    
-    
-    
-.about-image {
-    flex: 1; /* Takes up available space */
-    text-align: center; /* Center the image */
-    }
-    
-    
-.about-image img {
-    max-width: 100%; /* Ensure image is responsive and doesn't overflow */
+  }
+  
+  .about-image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .about-image img {
+    max-width: 100%;
     height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-.social{
-        margin-top: 0px ;
-    }  
-    
-    /* Media query for smaller screens */
-    
-    @media (max-width: 768px) {
-        .about-container {
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center;
-            text-align: center; /* Center text on smaller screens */
-        }
-        .about-content {
-            padding-right: 0; 
-            margin-bottom: 20px;
-            text-align: center;
-        }
+  
+    .about-content {
+      padding-right: 0;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    
-    
+  
+    .about-image {
+      order: -1;
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 300px !important;
+      height: 250px !important;
+      max-width: 350px;
+    }
+  }
+  
+  .social {
+    margin-top: 0px;
+  }
+  

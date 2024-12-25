@@ -52,6 +52,13 @@ function About() {
     exit: { opacity: 0, y: -20, transition: { duration: 0.5 } },
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if(contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <about-me>
       <ThemeProvider theme={theme}>
@@ -80,8 +87,8 @@ function About() {
               <h2 className="intro-message">
                 I'm a
                 <br />
-                <span className='intro-message2'></span>
-                <AnimatePresence mode="wait" initial={false} >
+                <span className="intro-message2"></span>
+                <AnimatePresence mode="wait" initial={false}>
                   <motion.span
                     key={currentPhrase.word}
                     variants={variants}
@@ -114,12 +121,11 @@ function About() {
                     Resume
                   </AnimatedButton>
                   <AnimatedButton
-                    component="a"
-                    href="/contact"
                     variant="contained"
                     color="secondary"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    onClick={scrollToContact}
                   >
                     Contact
                   </AnimatedButton>
@@ -127,32 +133,47 @@ function About() {
               </div>
             </div>
             <div className="about-image">
-              <Image 
-                src={ProfileImage} 
-                alt="Your Profile" 
-                roundedCircle 
-                fluid 
-                style={{ 
-                  width: '380px', // Adjust the size as needed
-                  height: '520px', 
-                  objectFit: 'cover' 
-                }} 
+              <Image
+                src={ProfileImage}
+                alt="Your Profile"
+                fluid
+                style={{
+                  width: '450px',
+                  height: '520px',
+                  objectFit: 'cover',
+                  borderRadius: '50px',
+                }}
               />
             </div>
           </div>
           <div className="about-container social">
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              {/* <h3 style={{ margin: 0, color: "#007BFF" }}>Social : </h3> */}
-              <a href="https://www.linkedin.com/in/arjun-yadav-638ab6165/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/arjun-yadav-638ab6165/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin size={32} color="#0e76a8" />
               </a>
-              <a href="https://github.com/yarjun" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/yarjun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub size={32} color="#333" />
               </a>
-              <a href="https://www.instagram.com/iarjunydv97/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/iarjunydv97/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram size={32} color="#E4405F" />
               </a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook size={32} color="#1877F2" />
               </a>
             </Box>

@@ -1,111 +1,109 @@
-/* Container styles */
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Reduced gap */
+    gap: 1.5rem;
     padding: 2rem;
     background-color: #f9f9f9;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Individual project box */
+.projects-header {
+    text-align: center;
+    font: 600 32px/20px Roboto, "Helvetica Neue", sans-serif;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
 .project-box {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 1.2rem; /* Reduced padding */
+    padding: 1.2rem;
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out;
     width: 100%;
-    max-height: 400px; /* Reduced max-height */
+    max-height: 400px;
     position: relative;
     overflow: hidden;
 }
 
-/* Reverse layout for alternate boxes */
 .project-box.reverse {
     flex-direction: row-reverse;
 }
 
-/* Project description */
 .project-description {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.3rem; /* Reduced gap */
+    gap: 0.3rem;
 }
 
 .project-title {
-    font-size: 1.3rem; /* Reduced font size */
+    font-size: 1.3rem;
     font-weight: bold;
     font-family: 'Georgia', serif;
-    color: #2f377e;
+    color: #04518b;
 }
 
-/* 083e94 */
 .project-date {
-    font-size: 0.8rem; /* Reduced font size */
+    font-size: 0.8rem;
     font-style: italic;
     color: #888;
 }
 
-/* Description as points */
 .project-description-list {
     list-style-type: disc;
-    padding-left: 18px; /* Reduced padding */
+    padding-left: 18px;
 }
 
 .project-description-item {
-    font-size: 0.9rem; /* Reduced font size */
-    line-height: 1.4; /* Reduced line height */
+    font-size: 0.9rem;
+    line-height: 1.4;
     color: #555;
     text-align: justify;
-    margin-bottom: 0.8rem; /* Reduced margin */
-    padding: 0.8rem; /* Reduced padding */
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
     border-radius: 8px;
-    background-color: #e5e7f8; /* Light background for the shadow box */
-    box-shadow: 0 4px 8px rgba(180, 179, 179, 0.1); /* Soft shadow around each line */
+    background-color: #ddeefb;
+    box-shadow: 0 4px 8px rgba(180, 179, 179, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     font: 400 15px/24px Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Hover effect to slightly intensify the shadow */
 .project-description-item:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Project technologies */
 .project-technologies {
-    display: flex; /* Make the container a flexbox */
-    align-items: center; /* Align the items vertically */
-    gap: 0.8rem; /* Reduced gap between text and icons */
-    margin-top: 0; 
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0;
 }
 
 .project-technologies h3 {
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1rem;
     font-weight: bold;
     color: #333;
 }
 
 .project-tech-icons {
     display: flex;
-    gap: 0.6rem; /* Reduced gap */
+    gap: 0.6rem;
     padding-bottom: 10px;
 }
 
 .tech-icon {
-    font-size: 1.6rem; /* Reduced font size */
+    font-size: 1.6rem;
     color: #333;
 }
 
-/* Project buttons */
 .project-buttons {
     display: flex;
     gap: 1rem;
@@ -120,10 +118,9 @@
     border-radius: 8px;
     text-align: center;
     display: inline-block;
-    width: 150px; /* Set fixed width for buttons */
+    width: 150px;
 }
 
-/* GitHub button (blue) */
 .project-link.github {
     background-color: #2196f3;
     color: white;
@@ -134,7 +131,6 @@
     transform: scale(1.05);
 }
 
-/* Live button (red) */
 .project-link-live {
     background-color: #FF5733;
     color: white;
@@ -145,21 +141,19 @@
     transform: scale(1.05);
 }
 
-/* Project image container */
 .project-image-container {
     flex: 0.8;
-    background-color: #dde0f5;
+    background-color: #ddeefb;
     position: relative;
     width: 100%;
-    height: 250px; /* Reduced height */
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevent images from overflowing */
+    overflow: hidden;
     border-radius: 15px;
 }
 
-/* Styling for stacked images */
 .project-image {
     position: absolute;
     max-width: 45%;
@@ -167,35 +161,30 @@
     border-radius: 8px;
     object-fit: cover;
     transition: transform 0.6s ease-in-out, z-index 0.6s ease-in-out;
-    will-change: transform; /* Optimizes performance for animation */
+    will-change: transform;
 }
 
-/* Middle image (front image) */
 .project-image.middle {
     z-index: 2;
-    transform: scale(1.4); /* Slightly larger for emphasis */
+    transform: scale(1.4);
 }
 
-/* Left image */
 .project-image.left {
     left: -20%;
     z-index: 1;
     transform: translateX(50%);
 }
 
-/* Right image */
 .project-image.right {
     right: -20%;
     z-index: 1;
     transform: translateX(-50%);
 }
 
-/* Hover effect for spiral effect */
 .project-image-container:hover .project-image {
-    animation: imageExpansion 4s forwards; /* Apply expansion animation */
+    animation: imageExpansion 4s forwards;
 }
 
-/* Apply staggered expansion for each image on hover */
 .project-image-container:hover .project-image:nth-child(1) {
     animation-delay: 0s;
 }
@@ -208,23 +197,21 @@
     animation-delay: 2s;
 }
 
-/* Keyframe animation for the image expansion */
 @keyframes imageExpansion {
     0% {
         transform: scale(1) translateX(0);
         z-index: 1;
     }
     50% {
-        transform: scale(1.5) translateX(0); /* Image expands */
+        transform: scale(1.5) translateX(0);
         z-index: 2;
     }
     100% {
-        transform: scale(1) translateX(0); /* Image resets after expansion */
+        transform: scale(1) translateX(0);
         z-index: 1;
     }
 }
 
-/* Fade-in effect for project boxes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -234,61 +221,66 @@
     }
 }
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
     .projects-container {
-        padding: 1rem; /* Reduced padding for mobile */
+        padding: 1rem;
     }
 
     .project-box {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        max-height: none; /* Remove max-height limit */
-        gap: 1rem; /* Adjust gap between elements */
-        padding: 1rem; /* Reduce padding */
+        flex-direction: column;
+        max-height: none;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .projects-header {
+        text-align: center;
+        font: 600 32px/20px Roboto, "Helvetica Neue", sans-serif;
+        margin-bottom: 10px;
+        color: #333;
+        padding-top: 10px;
     }
 
-    /* Hide image container in mobile view */
     .project-image-container {
         display: none;
     }
 
     .project-description {
-        order: 1; /* Ensure description comes first */
-        gap: 0.5rem; /* Adjust gap for smaller screens */
+        order: 1;
+        gap: 0.5rem;
     }
 
     .project-title {
-        font-size: 1.2rem; /* Reduce font size */
+        font-size: 1.2rem;
     }
 
     .project-date {
-        font-size: 0.7rem; /* Reduce font size */
+        font-size: 0.7rem;
     }
 
     .project-description-item {
-        font-size: 0.85rem; /* Reduce font size */
-        padding: 0.6rem; /* Adjust padding */
-        margin-bottom: 0.5rem; /* Reduce margin */
+        font-size: 0.85rem;
+        padding: 0.6rem;
+        margin-bottom: 0.5rem;
     }
 
     .project-technologies h3 {
-        font-size: 0.9rem; /* Reduce font size */
+        font-size: 0.9rem;
     }
 
     .project-tech-icons {
-        gap: 0.4rem; /* Reduce gap between icons */
+        gap: 0.4rem;
     }
 
     .tech-icon {
-        font-size: 1.4rem; /* Reduce icon size */
+        font-size: 1.4rem;
     }
 
     .project-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 0.5rem; /* Reduce gap */
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .project-link {
-        width: 100%; /* Full width buttons */
+        width: 100%;
     }
 }

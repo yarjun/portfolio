@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { FaReact, FaAngular, FaHtml5, FaCss3Alt, FaJsSquare, FaSass, FaTag, FaPhp, FaDatabase, FaMicrosoft, FaJava, FaPython, FaCode } from 'react-icons/fa';
 
 const technologyCategories = [
-    // ... (your technologyCategories data - same as before)
+    
     {
         category: 'Frontend',
         items: [
@@ -86,11 +86,11 @@ function Technologies() {
                 initial="hidden"
                 animate="visible"
             >
-                <Typography variant="h4" align="center" gutterBottom className="section-title">
+                <Typography  align="center" gutterBottom className="section-title">
                     Technologies
                 </Typography>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6} md={4} lg={3}> {/* Frontend */}
+                    <Grid item xs={12} sm={6} md={4} lg={3}> 
                         <motion.div variants={itemVariants}>
                             <Card elevation={3} className="technology-card">
                                 <CardContent>
@@ -109,12 +109,12 @@ function Technologies() {
                             </Card>
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3}> {/* Middleware & Microsoft (Combined) */}
+                    <Grid item xs={12} sm={6} md={4} lg={3}> 
                         <motion.div variants={itemVariants}>
                             <Card elevation={3} className="technology-card">
                                 <CardContent>
                                     <Typography variant="h6" color="primary" gutterBottom>
-                                        {technologyCategories[1].category} {/* Middleware */}
+                                        {technologyCategories[1].category} 
                                     </Typography>
                                     <div className="technology-list">
                                         {technologyCategories[1].items.map((item, idx) => (
@@ -127,11 +127,11 @@ function Technologies() {
                                 </CardContent>
                             </Card>
                         </motion.div>
-                        <motion.div variants={itemVariants}> {/* Microsoft Card */}
+                        <motion.div variants={itemVariants}>
                             <Card elevation={3} className="technology-card">
                                 <CardContent>
                                     <Typography variant="h6" color="primary" gutterBottom>
-                                        {technologyCategories[3].category} {/* Microsoft */}
+                                        {technologyCategories[3].category} 
                                     </Typography>
                                     <div className="technology-list">
                                         {technologyCategories[3].items.map((item, idx) => (
@@ -145,8 +145,8 @@ function Technologies() {
                             </Card>
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3}> {/* Coding Languages */}
-                        {/* ... (rest of the cards - Database and Coding Languages) */}
+                    <Grid item xs={12} sm={6} md={4} lg={3}> 
+                        
                         <motion.div variants={itemVariants}>
                             <Card elevation={3} className="technology-card">
                                 <CardContent>
@@ -165,7 +165,7 @@ function Technologies() {
                             </Card>
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3}> {/* Database */}
+                    <Grid item xs={12} sm={6} md={4} lg={3}> 
                         <motion.div variants={itemVariants}>
                             <Card elevation={3} className="technology-card">
                                 <CardContent>

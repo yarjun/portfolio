@@ -3,14 +3,13 @@ import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Ref to the nav menu
+  const menuRef = useRef(null); 
 
-  // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
+  const developedbyArjun = "{DevelopedbyArjun}"; 
 
-  // Close the menu if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.hamburger')) {
@@ -18,10 +17,8 @@ function Header() {
       }
     };
 
-    // Add event listener for clicks outside
     document.addEventListener('click', handleClickOutside);
 
-    // Cleanup event listener on component unmount
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
@@ -35,16 +32,16 @@ function Header() {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        <div className="name">Arjun Yadav</div>
+        <div className="name">{developedbyArjun}</div>
       </div>
       <div ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="/About">About</a>
-        <a href="/Technologies">Technologies</a>
-        <a href="/Experience">Experience</a>
-        <a href="/Projects">Projects</a>
-        <a href="/Certificates">Certificates</a>
-        <a href="/Interests">Interests</a>
-        <a href="/Contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );
