@@ -9,7 +9,7 @@ import chat from '../assets/images/chat.png';
 import portfolio1 from '../assets/images/portfolio1.png';
 import portfolio2 from '../assets/images/portfolio2.png';
 import portfolio3 from '../assets/images/portfolio3.png';
-
+/*Projects */
 const Projects = () => {
   const projects = [
     {
