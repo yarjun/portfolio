@@ -1,99 +1,114 @@
 .interests-container {
-    margin-top: 50px !important;
-    flex-direction: column;
- 
-    padding: 20px;
-    background-color: #f9f9f9;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-  }
-  
-  .interests-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 40px;
-  }
+  margin-top: 50px !important;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  
+.interests-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center; /* Ensures the title aligns properly on all screen sizes */
+}
+
+.interests-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  gap: 30px;
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 120px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9;
+  text-align: center;
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+.interest-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.interest-icon {
+  font-size: 3rem;
+  transition: color 0.3s ease;
+  /* Set unique default colors */
+  color: #FF5722; /* Default vibrant orange */
+}
+
+.interest-item:nth-child(1) .interest-icon {
+  color: #FF5722; /* Gym - Orange */
+}
+.interest-item:nth-child(2) .interest-icon {
+  color: #4CAF50; /* Squash - Green */
+}
+.interest-item:nth-child(3) .interest-icon {
+  color: #3F51B5; /* Programming - Blue */
+}
+.interest-item:nth-child(4) .interest-icon {
+  color: #FFC107; /* Movies - Yellow */
+}
+.interest-item:nth-child(5) .interest-icon {
+  color: #009688; /* Traveling - Teal */
+}
+
+.interest-item:hover .interest-icon {
+  color: #28a745; /* Change to green on hover */
+}
+
+.interest-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
   .interests-box {
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1000px;
-    gap: 30px;
-  }
-  
-  .interest-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: 120px;
-    height: 150px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    opacity: 0.8;
-    word-wrap: break-word; 
-    text-align: center; 
-    flex-grow: 1; 
-  }
-  
-  .interest-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    opacity: 1;
-  }
-  
-  .interest-icon {
-    font-size: 3rem;
-    color: #007bff;
-    transition: color 0.3s ease;
-  }
-  
-  .interest-item:hover .interest-icon {
-    color: #28a745;
-  }
-  
-  .interest-name {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    word-wrap: break-word; 
-    max-width: 100%;
-  }
-  
-  @media (max-width: 768px) {
-    .interests-box {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-    }
-   
-    .interests-title {
+  }
+
+  .interests-title {
       text-align: center;
       font-size: 1.8rem;
       font-weight: bold;
       color: #333;
       margin-bottom: 40px;
-    }
-  
-    .interest-item {
+  }
+
+  .interest-item {
       width: 90%;
       height: 130px;
-    }
-  
-    .interest-name {
-      font-size: 0.9rem; 
-    }
   }
-  
+
+  .interest-name {
+      font-size: 0.9rem;
+  }
+}

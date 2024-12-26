@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaDumbbell, FaTrophy, FaCode, FaFilm, FaPlane } from 'react-icons/fa';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import SportsTennisIcon from '@mui/icons-material/SportsTennis';
+import CodeIcon from '@mui/icons-material/Code';
+import MovieIcon from '@mui/icons-material/Movie';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import './Interests.css';
 
 const Interests = () => {
@@ -8,23 +12,23 @@ const Interests = () => {
       <h2 className="interests-title">My Interests</h2>
       <div className="interests-box">
         <div className="interest-item">
-          <FaDumbbell className="interest-icon" />
+          <FitnessCenterIcon style={{ color: '#FF5722', fontSize: '2.5rem' }} />
           <p className="interest-name">GYM</p>
         </div>
         <div className="interest-item">
-          <FaTrophy className="interest-icon" />
+          <SportsTennisIcon style={{ color: '#4CAF50', fontSize: '2.5rem' }} />
           <p className="interest-name">Squash</p>
         </div>
         <div className="interest-item">
-          <FaCode className="interest-icon" />
+          <CodeIcon style={{ color: '#3F51B5', fontSize: '2.5rem' }} />
           <p className="interest-name">Competitive Programming</p>
         </div>
         <div className="interest-item">
-          <FaFilm className="interest-icon" />
+          <MovieIcon style={{ color: '#FFC107', fontSize: '2.5rem' }} />
           <p className="interest-name">Movies</p>
         </div>
         <div className="interest-item">
-          <FaPlane className="interest-icon" />
+          <TravelExploreIcon style={{ color: '#009688', fontSize: '2.5rem' }} />
           <p className="interest-name">Traveling</p>
         </div>
       </div>
