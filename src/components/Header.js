@@ -8,7 +8,7 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
-  const developedbyArjun = "{DevelopedbyArjun}"; 
+  const developedbyArjun = "Arjun Yadav"; 
 
   useEffect(() => {
     const handleClickOutside = (event) => {

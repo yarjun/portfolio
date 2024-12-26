@@ -22,8 +22,8 @@ const Projects = () => {
       ],
       technologies: [<FaReact />, <FaHtml5 />, <FaCss3 />],
       images: [portfolio1, portfolio2, portfolio3],
-      github: 'https://github.com/your-portfolio3',
-      live: 'https://your-live-website1.com',
+      github: 'https://github.com/yarjun/portfolio',
+      live: 'https://github.com/yarjun/portfolio',
     },
     {
       id: 2,
@@ -99,7 +99,7 @@ const Projects = () => {
               >
                 View Code
               </a>
-              {project.live && (
+              {/* {project.live && (
                 <a
                   href={project.live}
                   className="project-link project-link-live"
@@ -108,7 +108,7 @@ const Projects = () => {
                 >
                   Visit
                 </a>
-              )}
+              )} */}
             </div>
           </div>
           <div className="project-image-container">
