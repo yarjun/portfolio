@@ -130,4 +130,12 @@
   .social {
     margin-top: 0px;
   }
+
+  /* Mobile view */
+@media only screen and (max-width: 768px) {
+  .react-snowfall {
+    --flake-size: 2px !important; /* Adjust the snowflake size */
+  }
+}
+  
   

@@ -1,33 +1,58 @@
 import React, { useState, useEffect } from 'react';
+import Snowfall from 'react-snowfall';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import './About.css';
 import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import ProfileImage from '../assets/images/Image.jpeg';
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { SiLeetcode } from "react-icons/si";
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: '#2196f3',
-      contrastText: '#fff',
-    },
-    secondary: {
-      main: '#ff5733',
-      contrastText: '#fff',
-    },
+    primary: { main: '#2196f3', contrastText: '#fff' },
+    secondary: { main: '#ff5733', contrastText: '#fff' },
   },
 });
 
-const AnimatedButton = styled(motion(Button))(({ theme }) => ({
-  padding: theme.spacing(1, 3.5),
-  fontSize: '1rem',
-}));
-
 function About() {
+  const [isDaytime, setIsDaytime] = useState(true);
+  const [snowColor, setSnowColor] = useState('#fff');
+  const [flakeSize, setFlakeSize] = useState(30); // Default size for snowflakes
+
+  //const snowColors = ['#00bfff', '#00bfff', '#ff6347', '#32cd32', '#ff4500']; // Pink, Blue, Tomato, Lime, OrangeRed
+  const snowColors = ['#00bfff', '#00bfff'];
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+    setIsDaytime(currentHour >= 0 && currentHour < 0);
+
+    const colorInterval = setInterval(() => {
+      setSnowColor(snowColors[Math.floor(Math.random() * snowColors.length)]);
+    }, 1000); // Change color every second
+
+    return () => clearInterval(colorInterval);
+  }, [snowColors]);
+
+  // Resize effect to adjust snowflake size dynamically
+  useEffect(() => {
+    const handleResize = () => {
+      // Check the window width and adjust the snowflake size accordingly
+      if (window.innerWidth <= 768) {
+        setFlakeSize(10); // Smaller flakes for mobile view
+      } else {
+        setFlakeSize(30); // Larger flakes for desktop view
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Set initial flake size based on the current window size
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const phrases = [
     { greeting: 'Bonjour', word: 'Web Developer' },
     { greeting: 'Hello', word: 'UI/UX Designer' },
@@ -54,15 +79,23 @@ function About() {
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
-    if(contactSection) {
+    if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <about-me>
+    <div className="about-me">
       <ThemeProvider theme={theme}>
         <section id="about" className="about-section">
+          {isDaytime ? (
+            <div className="sunshine">
+              <div className="sun"></div>
+              <div className="rays"></div>
+            </div>
+          ) : (
+            <Snowfall color={snowColor} flakeSize={flakeSize} />
+          )}
           <div className="about-container">
             <div className="about-content">
               <div className="hello-class">
@@ -109,7 +142,7 @@ function About() {
               </h4>
               <div className="about-actions">
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                  <AnimatedButton
+                  <Button
                     component="a"
                     href="/resume.pdf"
                     target="_blank"
@@ -119,8 +152,29 @@ function About() {
                     whileTap={{ scale: 0.9 }}
                   >
                     Resume
-                  </AnimatedButton>
-                  <AnimatedButton
+                  </Button>
+                  <Button
+                    component="a"
+                    href="https://leetcode.com/u/Arjun15597/"
+                    target="_blank"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "black",
+                      color: "white",
+                      textTransform: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      "&:hover": {
+                        opacity: 0.8, // Adds the dimming effect
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <SiLeetcode style={{ fontSize: "20px" }} /> Leetcode
+                  </Button>
+                  <Button
                     variant="contained"
                     color="secondary"
                     whileHover={{ scale: 1.1 }}
@@ -128,7 +182,7 @@ function About() {
                     onClick={scrollToContact}
                   >
                     Contact
-                  </AnimatedButton>
+                  </Button>
                 </Box>
               </div>
             </div>
@@ -180,7 +234,7 @@ function About() {
           </div>
         </section>
       </ThemeProvider>
-    </about-me>
+    </div>
   );
 }
 
