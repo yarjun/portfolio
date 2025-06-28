@@ -49,7 +49,7 @@ const Projects = () => {
       ],
       technologies: [<FaReact />, <FaDatabase />], 
       images: [Policy_Impact_Dashboard],
-      github: 'https://github.com/yarjun/first-web_dev-full_stack-blog_app-using-nodejs',
+      github: 'https://github.com/yarjun',
       live: 'https://your-live-website4.com',
     },
     {
