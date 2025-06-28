@@ -31,9 +31,9 @@ const technologyCategories = [
     {
         category: 'Tools',
         items: [
-            { name: 'Tableau,', icon: <FaCode color="#00599C" /> },
-            { name: 'PowerPoint,', icon: <FaCode color="#00599C" /> },
-            { name: 'Excel,', icon: <FaCode color="#00599C" /> },
+            { name: 'Tableau', icon: <FaCode color="#00599C" /> },
+            { name: 'PowerPoint', icon: <FaCode color="#00599C" /> },
+            { name: 'Excel', icon: <FaCode color="#00599C" /> },
             { name: 'Git', icon: <FaGitAlt color="#F05032" /> },
             { name: 'Jira', icon: <FaCode color="#0052CC" /> },
             { name: 'VS Code', icon: <FaCode color="#007ACC" /> },
