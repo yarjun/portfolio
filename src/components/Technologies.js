@@ -13,7 +13,6 @@ const technologyCategories = [
         category: 'Frontend',
         items: [
             { name: 'React.js', icon: <FaReact color="#61DBFB" /> },
-            { name: 'Angular', icon: <FaAngular color="#DD0031" /> },
             { name: 'HTML5', icon: <FaHtml5 color="#E44D26" /> },
             { name: 'CSS3', icon: <FaCss3Alt color="#264DE4" /> },
             { name: 'JavaScript', icon: <FaJsSquare color="#F7DF1E" /> },
@@ -24,23 +23,19 @@ const technologyCategories = [
     {
         category: 'Backend',
         items: [
-            { name: 'Node.js', icon: <FaNodeJs color="#339933" /> },
             { name: 'Spring Boot', icon: <SiSpringboot color="#6DB33F" /> },
-            { name: 'Express.js', icon: <FaNodeJs color="#000000" /> },
-            { name: 'PHP', icon: <FaPhp color="#777BB4" /> },
             { name: 'MongoDB', icon: <SiMongodb color="#47A248" /> },
             { name: 'SQL', icon: <FaDatabase color="#336791" /> },
-            { name: '.NET Core', icon: <SiDotnet color="#512BD4" /> },
-            { name: 'AWS', icon: <FaAws color="#FF9900" /> },
         ],
     },
     {
         category: 'Tools',
         items: [
+            { name: 'Tableau,', icon: <FaCode color="#00599C" /> },
+            { name: 'PowerPoint,', icon: <FaCode color="#00599C" /> },
+            { name: 'Excel,', icon: <FaCode color="#00599C" /> },
             { name: 'Git', icon: <FaGitAlt color="#F05032" /> },
-            { name: 'NPM', icon: <FaNpm color="#CB3837" /> },
             { name: 'Jira', icon: <FaCode color="#0052CC" /> },
-            { name: 'Postman', icon: <FaCode color="#FF6C37" /> },
             { name: 'VS Code', icon: <FaCode color="#007ACC" /> },
             { name: 'Confluence', icon: <FaCode color="#172B4D" /> },
         ],
@@ -52,7 +47,6 @@ const technologyCategories = [
             { name: 'Python', icon: <FaPython color="#3776AB" /> },
             { name: 'TypeScript', icon: <SiTypescript color="#007ACC" /> },
             { name: 'C++', icon: <FaCode color="#00599C" /> },
-            { name: 'C#', icon: <FaCode color="#68217A" /> },
             { name: 'C', icon: <FaCode color="#00599C" /> },
         ],
     },
