@@ -49,7 +49,7 @@ const Projects = () => {
         'Skills: Policy Research, Data Cleaning, Python, Excel, Tableau, PowerPoint, Public Data Analytics, Impact Evaluation.'
       ],
       technologies: [<FaReact />, <FaDatabase />], 
-      images: [blog],
+      images: [Policy Impact Dashboard],
       github: 'https://github.com/yarjun/first-web_dev-full_stack-blog_app-using-nodejs',
       live: 'https://your-live-website4.com',
     },
