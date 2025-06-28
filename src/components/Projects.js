@@ -45,8 +45,6 @@ const Projects = () => {
       description: [
         'Conducted a policy-focused data analysis project to evaluate the impact of India’s rural employment and health schemes (e.g., MGNREGA, Ayushman Bharat) using publicly available datasets from data.gov.in.',
         'Cleaned and transformed raw CSV and JSON datasets using Python (pandas, NumPy); performed statistical analysis to identify regional disparities and trends.',
-        'Created data visualizations using Excel (PivotTables, Charts) and Tableau to communicate findings on healthcare access and employment effectiveness to non-technical audiences.',
-        'Skills: Policy Research, Data Cleaning, Python, Excel, Tableau, PowerPoint, Public Data Analytics, Impact Evaluation.'
       ],
       technologies: [<FaReact />, <FaDatabase />], 
       images: [Policy_Impact_Dashboard],
