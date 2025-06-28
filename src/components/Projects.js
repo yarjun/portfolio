@@ -28,7 +28,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'Food Order Application',
-      date: 'Sep 2023-Oct 2023',
+      date: 'Sep 2023-Nov 2023',
       description: [
         'Developed a responsive React-based Food Ordering Platform to streamline the ordering process for users and restaurant owners.',
         'Conducted thorough testing and debugging to identify and resolve UI issues, ensuring a polished and error-free user interface.',
@@ -36,10 +36,26 @@ const Projects = () => {
       technologies: [<FaReact />, <FaNodeJs />, <FaDatabase />], 
       images: [first, second, third],
       github: 'https://github.com/yarjun/Food-Order-App',
-      live: 'https://your-live-website2.com',
+      live: 'https://food-order-app-one-dun.vercel.app/',
     },
     {
       id: 3,
+      title: 'Policy Impact Dashboard (Public Data Analysis Project)',
+      date: 'May 2021-Aug 2023',
+      description: [
+        'Conducted a policy-focused data analysis project to evaluate the impact of India’s rural employment and health schemes (e.g., MGNREGA, Ayushman Bharat) using publicly available datasets from data.gov.in.',
+        'Cleaned and transformed raw CSV and JSON datasets using Python (pandas, NumPy); performed statistical analysis to identify regional disparities and trends.',
+        'Created data visualizations using Excel (PivotTables, Charts) and Tableau to communicate findings on healthcare access and employment effectiveness to non-technical audiences.',
+        'Compiled a final insights report and interactive dashboard using PowerPoint and Tableau Public, demonstrating analytical storytelling aligned with real-world decision-making.',
+        'Skills: Policy Research, Data Cleaning, Python, Excel, Tableau, PowerPoint, Public Data Analytics, Impact Evaluation.'
+      ],
+      technologies: [<FaReact />, <FaDatabase />], 
+      images: [blog],
+      github: 'https://github.com/yarjun/first-web_dev-full_stack-blog_app-using-nodejs',
+      live: 'https://your-live-website4.com',
+    },
+    {
+      id: 4,
       title: 'Socket.IO — Chatting Application',
       date: 'Sep 2017-Dec 2017',
       description: [
@@ -50,20 +66,8 @@ const Projects = () => {
       images: [chat],
       github: 'https://github.com/yarjun/node-course-2-chat-app',
       live: 'https://your-live-website1.com',
-    },
-    {
-      id: 4,
-      title: 'Blog Application',
-      date: 'Jun 2016-Sep 2016',
-      description: [
-        'Developed a robust Blog Application using Node.js, MongoDB, and the Express framework to provide a platform for users to create, edit, and share blog posts.',
-        'Implemented a REST API to handle CRUD operations for blog posts using the Express framework.',
-      ],
-      technologies: [<FaNodeJs />, <FaDatabase />], 
-      images: [blog],
-      github: 'https://github.com/yarjun/first-web_dev-full_stack-blog_app-using-nodejs',
-      live: 'https://your-live-website4.com',
     }
+    
   ];
 
   return (
