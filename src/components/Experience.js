@@ -36,12 +36,11 @@ function Experience() {
     },
     {
       id: 3,
-      title: "Systems Engineer",
+      title: "Strategy & Technology Analyst (Systems Engineer)",
       company: "Tata Consultancy Services",
       location: "Gurugram, India",
       dateRange: "Jul 2019 - Apr 2021",
-      description:
-        "Automation Implementation: Spearheaded the development and deployment of an automated testingframework leveraging AWS services for scalable test execution and data storage.Utilized Docker for containerization and Jenkins for continuous integration and delivery (CI/CD) pipelines.Developed and maintained user interfaces for internal applications using React.js,ensuring a responsive and intuitive user experience. Integrated React components with backend APIs(Node.js) to facilitate seamless data flow and interaction.Conducted thorough root cause analysis and resolution of complex issues encounter edduring both pre-production and production stages, reducing downtime by 30%.Managed and maintained test data within AWS S3 and RDS, ensuring secure and efficient access for testing purposes.",
+      description:"• Reduced QA cycle time by 60% through defect trend analysis using Python and Excel PivotTables. Conducted root cause analysis via SQL and system logs, cutting production downtime by 30%. Improved workflow efficiency by 25% by automating backend tasks in Java and Spring Boot based on stakeholder feedback. Designed reporting pipelines to export usage metrics into Excel and visualize KPIs using Tableau. Prepared internal business presentations in PowerPoint, summarizing technical insights for non-tech stakeholders. Coordinated across global QA, Dev, and PM teams using JIRA, Confluence, and Git. Supported desk research and sprint retrospectives, providing data-backed suggestions for process optimization. Demonstrated strong communication, adaptability, and ownership in cross-functional, client-facing environments.",
       logo: tcsLogo, 
       linkedin: "https://www.linkedin.com/company/tata-consultancy-services/",
     },
